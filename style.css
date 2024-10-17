@@ -13,11 +13,12 @@ body {
     width: 100%;
 }
 
-h1{
-    color:  #397929;
+h1 {
+    color: #397929;
 }
-p{
-    color:   #397929;
+
+p {
+    color: #397929;
 }
 
 .dino {
@@ -27,13 +28,11 @@ p{
 
 .header {
     display: flex;
-    justify-content: center;
+    gap: 10px;
     align-items: center;
 }
 
 #form-popup {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin: 40px;
     background: linear-gradient(0deg, rgb(194, 248, 180) 20%, rgb(255, 255, 255) 96%);
     padding-inline: 10px;
     border-radius: 20px;
@@ -41,12 +40,13 @@ p{
     width: 280px;
     justify-content: center;
     align-items: center;
-    transition: transform 0.3s ease;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
     display: none;
 }
 
-.sign-form:hover {
+#form-popup:hover {
     transform: scale(1.02);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 form {
@@ -64,7 +64,7 @@ form {
 .gender {
     display: flex;
     flex-direction: row;
-    color:  #397929;
+    color: #397929;
 }
 
 input {
@@ -73,16 +73,16 @@ input {
 
 input[type=text],
 [type=password] {
-    border: 1px solid #519c3e;
+    border: 1px solid #dad8d8;
     width: 100%;
     height: 30px;
     transition: transform 0.3s ease;
-
+    
     background: repeating-linear-gradient(135deg,
-            #ffffff,
-            #ffffff 15px,
-            #dad8d8 15px,
-            #dad8d8 25px);
+    #ffffff,
+    #ffffff 15px,
+    #dad8d8 15px,
+    #dad8d8 25px);
 }
 
 input[type="text"]:hover,
@@ -98,13 +98,11 @@ input[type="password"]:hover {
 input[type="text"]:valid,
 input[type="password"]:valid {
     background: #d1ffd1;
-    border-color: #6ce688;
 }
 
 input[type="text"]:focus,
 input[type="password"]:focus {
     background: #d1ffd1;
-    border-color: #6ce688;
 }
 
 .button-container p {
@@ -116,8 +114,8 @@ input[type="password"]:focus {
 }
 
 input[type=submit] {
-    background:#3c943f;
-   
+    background-color: #4CAF50;
+
     transition: transform 0.3s ease;
 }
 
@@ -134,7 +132,7 @@ input[type="submit"],
 
 input[type="submit"]:hover {
     transform: scale(1.05);
-    background: #519c3e;
+    background-color: #3c943f;
 }
 
 input[type="submit"]:active {
