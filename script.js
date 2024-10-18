@@ -5,5 +5,5 @@ function formPopUp() {
 
 function closeForm() {
     document.getElementById("form-popup").style.display = "none"; 
-    document.getElementById("open-button").style.display = "block";
+    document.getElementById("open-button").style.display = "flex";
 }
