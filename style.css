@@ -37,8 +37,6 @@ p {
 }
 
 #form-popup {
-    flex-wrap: wrap;
-    flex: 1;
     font-size: 25px;
     background: linear-gradient(0deg, rgb(194, 248, 180) 20%, rgb(255, 255, 255) 96%);
     padding: 20px;
