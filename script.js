@@ -12,7 +12,7 @@ function closeForm() {
 
 function showStep(stepId) {
     const steps = document.getElementsByClassName("form-step");
-    for (let step of steps) {
+    for (let step of steps) { 
         step.style.display = "none"; 
     }
     document.getElementById(stepId).style.display = "flex"; 
