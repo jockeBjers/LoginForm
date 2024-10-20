@@ -1,6 +1,8 @@
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -9,17 +11,18 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    max-height: 100vh;
-    width: 100%;
+    background-color: #f5f5f5;
 }
 
 h1 {
     color: #397929;
     font-size: 26px;
+    text-align: center;
 }
 
 p {
     color: #397929;
+    font-size: 16px;
 }
 
 .dino {
@@ -29,21 +32,20 @@ p {
 
 .header {
     display: flex;
-    gap: 10px;
     align-items: center;
+    justify-content: center;
 }
 
 #form-popup {
+    flex-wrap: wrap;
+    flex: 1;
     font-size: 25px;
     background: linear-gradient(0deg, rgb(194, 248, 180) 20%, rgb(255, 255, 255) 96%);
-    padding-inline: 10px;
+    padding: 20px;
     border-radius: 20px;
-    height: 350px;
     width: 300px;
-    justify-content: center;
-    align-items: center;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
     display: none;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 #form-popup:hover {
@@ -51,101 +53,104 @@ p {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-form {
-    height: 100%;
+.form-step {
     display: flex;
     flex-direction: column;
-}
-
-.user {
-    display: flex;
-    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     gap: 20px;
+    height: 100%;
+}
+.user p{
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-input {
+/* Input */
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+    margin-top: 10px;
     width: 100%;
-}
-
-input[type=text],
-[type=password] {
-    font-size: 25px;
+    padding: 10px;
+    font-size: 16px;
     border: 1px solid #dad8d8;
-    width: 100%;
-    height: 40px;
-    transition: transform 0.3s ease;
-    
-    background: repeating-linear-gradient(135deg,
-    #ffffff,
-    #ffffff 15px,
-    #dad8d8 15px,
-    #dad8d8 25px);
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    background: repeating-linear-gradient(135deg, #ffffff, #ffffff 15px, #dad8d8 15px, #dad8d8 25px);
 }
 
 input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="tel"]:hover,
 input[type="password"]:hover {
     transform: scale(1.05);
-    background: repeating-linear-gradient(135deg,
-            #ffffff,
-            #ffffff 15px,
-            #c2f8b4 15px,
-            #c2f8b4 25px);
+    background: repeating-linear-gradient(135deg, #ffffff, #ffffff 15px, #c2f8b4 15px, #c2f8b4 25px);
 }
 
 input[type="text"]:valid,
+input[type="email"]:valid,
+input[type="tel"]:valid,
 input[type="password"]:valid {
     background: #d1ffd1;
 }
 
 input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
 input[type="password"]:focus {
     background: #d1ffd1;
 }
-
-.button-container p {
+/* Buttons */
+.button-container {
+    margin-top: 40px;
     gap: 10px;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    width: 100%;
 }
 
-input[type=submit] {
-    background-color: #4CAF50;
-
-    transition: transform 0.3s ease;
-}
-
+.buttons,
 input[type="submit"],
 #close-btn {
-    cursor: pointer;
+    flex: 1;
+    background-color: #4CAF50;
     color: white;
     border-radius: 10px;
-    font-size: 24px;
-    flex: 1;
-    height: 40px;
+    font-size: 18px;
+    padding: 10px;
     border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+
 }
 
-input[type="submit"]:hover {
+.buttons:hover,
+input[type="submit"]:hover,
+#close-btn:hover {
     transform: scale(1.05);
     background-color: #3c943f;
 }
 
-input[type="submit"]:active {
+.buttons:active,
+input[type="submit"]:active,
+#close-btn:active {
     transform: scale(1.15);
-    background: #519c3e;
+    background-color: #519c3e;
 }
 
 #close-btn {
-    background: #dd3a3a;
-    transition: transform 0.3s ease;
+    background-color: #dd3a3a;
 }
 
 #close-btn:hover {
-    transform: scale(1.05);
-    background: #a82525;
+    background-color: #a82525;
 }
 
+/* Open Button */
 #open-button {
     font-size: 20px;
     padding: 10px;
@@ -154,7 +159,7 @@ input[type="submit"]:active {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 #open-button:hover {

@@ -6,7 +6,7 @@ function formPopUp() {
 
 function closeForm() {
     document.getElementById("form-popup").style.display = "none"; 
-    document.getElementById("open-button").style.display = "block";
+    document.getElementById("open-button").style.display = "flex";
 }
 
 function showStep(stepId) {
@@ -14,5 +14,5 @@ function showStep(stepId) {
     for (let step of steps) {
         step.style.display = "none"; 
     }
-    document.getElementById(stepId).style.display = "block"; 
+    document.getElementById(stepId).style.display = "flex"; 
 }
