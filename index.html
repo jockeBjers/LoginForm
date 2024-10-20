@@ -7,52 +7,103 @@
     <title>DinosaurSite</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <link rel="icon" type="image/x-icon" href="dinohead.png">
+    <link rel="icon" type="image/x-icon" href="./images/dinohead.png">
 </head>
 
 <body>
 
-
     <button id="open-button" onclick="formPopUp()">Sign up!</button>
 
-    <div class="sign-form" id="form-popup">
-        <form action="https://jockebjers.github.io/rock-paper-scissors/">
+    <div class="sign-form" id="form-popup" style="display: none;">
+
+
+        <div id="step-1" class="form-step">
             <div class="header">
-                <img class="dino" src="dino.png" alt="Group of hippos">
-                <h1>Sign up</h1>
+                <img class="dino" src="./images/dino.png" alt="Group of hippos">
+                <h1>Enter your name</h1>
+            </div>
+            <div class="user">
+                <p>
+                    <label>First name:<input type="text" name="firstName" placeholder="Your first name..."
+                            required></label>
+                </p>
+                <p>
+                    <label>Last name:<input type="text" name="lastName" placeholder="Your last name..."
+                            required></label>
+                </p>
+            </div>
+            <div class="button-container">
+                <p>
+                    <button type="button" onclick="closeForm()">Close</button>
+                    <button type="button" onclick="showStep('step-2')">Next</button>
+                </p>
+            </div>
+        </div>
+
+
+        <div id="step-2" class="form-step" style="display: none;">
+            <div class="header">
+                <img class="dino" src="./images/dino.png" alt="Group of hippos">
+                <h1>Email and phone</h1>
+            </div>
+            <div class="user">
+                <p>
+                    <label>Email:<input type="email" name="email" placeholder="Your email..." required></label>
+                </p>
+                <p>
+                    <label>Phone:<input type="tel" name="phone" placeholder="Your phone number..." required></label>
+                </p>
+            </div>
+            <div class="button-container">
+                <p>
+                    <button type="button" onclick="showStep('step-1')">Back</button>
+                    <button type="button" onclick="showStep('step-3')">Next</button>
+                </p>
+            </div>
+        </div>
+
+
+        <div id="step-3" class="form-step" style="display: none;">
+            <div class="header">
+                <img class="dino" src="./images/dino.png" alt="Group of hippos">
+                <h1>User information</h1>
             </div>
             <div class="user">
                 <p>
                     <label>Username:<input type="text" name="username" placeholder="Your username..." required></label>
                 </p>
                 <p>
-                    <label>Password:<input type="password" name="password" placeholder="Your password..."
-                            required></label>
+                    <label>Password:<input type="password" name="password" placeholder="Your password..." required></label>
                 </p>
-                <p>
-                    <label>Name:<input type="text" name="name" placeholder="Your name..." required></label>
-                </p>
-                <br>
-            </div>
-            <div class="gender">
-                Gender:
-                <input id="male" type="radio" name="gender" value="m" checked>
-                <label for="male">Male</label>
-                <input id="female" type="radio" name="gender" value="f">
-                <label for="female">Female</label>
             </div>
             <div class="button-container">
                 <p>
-                    <input type="submit" value="Submit">
-                    <button type="button" id="close-btn" onclick="closeForm()">Close</button>
+                    <button type="button" onclick="showStep('step-2')">Back</button>
+                    <button type="button" onclick="showStep('step-4')">Next</button>
                 </p>
             </div>
-        </form>
+        </div>
+
+
+
+        <div id="step-4" class="form-step" style="display: none;">
+            <div class="header">
+                <img class="dino" src="./images/dino.png" alt="Group of hippos">
+                <h1>Congratulations!</h1>
+            </div>
+            <div class="user">
+                <p>You're now registered and ready to go, press submit and enjoy!</p>
+                <!-- You can add a summary of the entered information here if needed -->
+            </div>
+            <div class="button-container">
+                <p>
+                    <button type="button" onclick="showStep('step-2')">Back</button>
+                    <input type="submit" value="Submit"> 
+                    <button type="button" onclick="closeForm()">Close</button>
+                </p>
+            </div>
+        </div>
     </div>
-
-
-
-
 
 
 </body>
